@@ -194,42 +194,34 @@
 //             }
 //         }]
 
-// let usersWithId = [
-//     {id: 1, name: 'vasya', age: 31, status: false},
-//     {id: 2, name: 'petya', age: 30, status: true},
-//     {id: 3, name: 'kolya', age: 29, status: true},
-//     {id: 4, name: 'olya', age: 28, status: false}
-// ];
-//
-// let citiesWithId = [
-//     {user_id: 2, country: 'USA', city: 'Portland'},
-//     {user_id: 4, country: 'Ukraine', city: 'Ternopil'},
-//     {user_id: 1, country: 'Poland', city: 'Krakow'},
-//     {user_id: 3, country: 'USA', city: 'Miami'}
-// ];
-//
-// let newArray = []
-// for (const user of usersWithId) {
-//     for (const citys of citiesWithId) {
-//         if (user.id === citys.user_id) {
-//             user.address = citys
-//         }
-//     }
-//     newArray.push(user)
-// }
-// console.log(newArray)
+let usersWithId = [
+    {id: 1, name: 'vasya', age: 31, status: false},
+    {id: 2, name: 'petya', age: 30, status: true},
+    {id: 3, name: 'kolya', age: 29, status: true},
+    {id: 4, name: 'olya', age: 28, status: false}
+];
 
-// let newArray =[]
-// for(const user of usersWithId ){
-//     for ( const cities of citiesWithId ){
-//         if (user.id===cities.user_id){
-//             user.addres = cities
-//         }}
-//     newArray.push(user)
-// }
-// console.log(newArray)
+let citiesWithId = [
+    {user_id: 2, country: 'USA', city: 'Portland'},
+    {user_id: 4, country: 'Ukraine', city: 'Ternopil'},
+    {user_id: 1, country: 'Poland', city: 'Krakow'},
+    {user_id: 3, country: 'USA', city: 'Miami'}
+];
+
+let newArray = []
+for (const user of usersWithId) {
+    for (const citys of citiesWithId) {
+        if (user.id === citys.user_id) {
+            user.address = citys
+        }
+    }
+    newArray.push(user)
+}
+console.log(newArray)
+
 
 // - Дан масив ['a', 'b', 'c']. Додайте йому в кінець елементи 1, 2, 3 за допомогою циклу.
+
 // let array = ['a', 'b', 'c']
 // for (let i = 0; i < 3; i++) {
 //     array.push(i)
@@ -249,39 +241,93 @@
 // console.log(newArr);
 
 
+//  - Дан масив ['a', 'b', 'c']. Додайте йому в кінець елементи 1, 2, 3 за допомогою циклу.
+let arr  = ['a','b','c']
+for (let i = 1; i <= 3; i++){
+    arr.push(i);
+};
+console.log(arr);
+
+
 // - Дан масив [1, 2, 3]. Додайте йому в кінець елементи 4, 5, 6.
+let arr = [1,2,3];
+arr.push(4,5,6)
+console.log(arr)
+
 // - Дан масив [1, 2, 3]. Додайте йому в початок елементи 4, 5, 6.
-// - Дан масив ['js', 'css', 'jq']. Виведіть на екран перший елемент за допомогою shift()
-// - Дан масив ['js', 'css', 'jq']. Виведіть на екран останній елемент за допомогою pop()
+let arr = [1,2,3];
+arr.unshift(4,5,6)
+console.log(arr)
+
+
 // - Дан масив [1, 2, 3, 4, 5]. Перетворіть масив в [4, 5].
+
+let arr = [1,2,3,4,5];
+let arr2 = arr.slice(3, 5);
+console.log(arr2);
+
+
 // - Дан масив [1, 2, 3, 4, 5]. Перетворіть масив в [1,2].
+
+let arr = [1,2,3,4,5];
+let arr2 = arr.slice(0, 2);
+console.log(arr2);
+
+// - Дан масив [1, 2, 3, 4, 5]. Зробіть з нього масив [1, 2, 3, 'a', 'b', 'c'].
+
+let arr = [1,2,3,4,5];
+let arr2 = arr.slice(0, 3);
+arr2.push('a','b','c')
+console.log(arr2);
+
+
 // - Дан масив [1, 2, 3, 4, 5]. Зробіть з нього масив [1, 2, 3, 'a', 'b', 'c', 4, 5].
-//     Підказка. Необхідно стерти елементи, зберегти їх кудись. Дописати букви і після букв повернути стерті цифри
-// - Дан масив [1, 2, 3, 4, 5]. Зробіть з нього масив [1, 'a', 'b', 2, 3, 4, 'c', 5, 'e'].
-//     Підказка. Працюйте по принципу задачі вище.
+//   Підказка. Необхідно стерти елементи, зберегти їх кудись. Дописати букви і після букв повернути стерті цифри
+let arr = [1,2,3,4,5];
+arr.splice(3,0,'a','b','c');
+console.log(arr);
+
+
+// - Дан масив [1, 2, 3, 4, 5]. Зробіть з нього масив [1, 'a', 'b', 2, 3, 4, 'c', 5, 'e']
+
+
+let arr = [1, 2, 3, 4, 5];
+arr.splice(1, 0, 'a','b');
+arr.splice(6, 0, 'c');
+arr.splice(8, 0, 'e');
+console.log(arr);
+
+
 // - Взяти масив з 10 чисел або створити його. Вивести в консоль тільки ті елементи, значення яких є парними.
+
+let arr = [2,45,-22,98,-76,1,97,3,4,99];
+for (let i = 0; i < arr.length; i++){
+    if (arr[i]%2 === 0){
+        console.log(arr[i]);
+    }
+};
 // - Взяти масив з 10 чисел або створити його. Створити 2й порожній масив. За допомогою будь-якого циклу та push () скопіювати значення одного масиву в інший
 
-// let array =[4,5,7,8,0,4,1,23,44,67]
-// let emptyArray = []
-// for (const empty of array) {
-//     emptyArray.push(empty)
-// }
-// console.log(emptyArray)
+let array =[4,5,7,8,0,4,1,23,44,67]
+let emptyArray = []
+for (const empty of array) {
+    emptyArray.push(empty)
+}
+console.log(emptyArray)
 
 
 
 // - Взяти масив з 10 чисел або створити його. Створити 2й порожній масив. За допомогою будь-якого циклу скопіювати значення одного масиву в інший.
 
 let array =[4,5,7,8,0,4,1,23,44,67];
-
 let emptyArray = [];
+                                     //1Й СПОСІБ
+for (let i = 0; i < array.length; i++) {
 
-// for (let i = 0; i < array.length; i++) {
-//
-//      emptyArray[i] = array[i]
-// }
-// console.log(emptyArray);
+     emptyArray[i] = array[i]
+}
+console.log(emptyArray);
+                                      //2Й СПОСІБ
 for (const emptyArrayElement of array) {
     emptyArray = array
 }
