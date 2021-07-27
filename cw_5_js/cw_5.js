@@ -56,10 +56,10 @@ for (const element of aElement) {
 
 // h) отримує всі елементи 'a' та додає їм клас element_XXX. Де XXX - текстовий контент елементу a
 
-let aElement = document.getElementsByTagName('a')
+/*let aElement = document.getElementsByTagName('a')
 for (const element of aElement) {
 element.setAttribute('class',`element_${element.innerText}`)
-}
+}*/
 
 // i) отримує всі елементи 'sub-header' та змінює колір фону. Фон отримати з prompt()
 
@@ -82,21 +82,32 @@ for (const header of subHeader){
 
 // k) отримує елемент з класом content_1 та заміняє  в ньому тест на довільний. Текст отримати з prompt()
 
-let content_1 = document.getElementsByClassName('content_1')
+/*let content_1 = document.getElementsByClassName('content_1')
 for (const content of content_1){
         content.innerText = prompt()
-}
+}*/
 
 // l) отримати елементи p та змінити їм padding на 20px
 
-let elementP = document.getElementsByTagName('p')
+/*let elementP = document.getElementsByTagName('p')
 for (const p of elementP) {
     p.style.padding = '20px'
-}
+}*/
 
 // m) отримати елементи з класом text2 та змінити їм текст на назву групи (mon-year)
 
-let text_2 = document.getElementsByClassName('text2')
+/*let text_2 = document.getElementsByClassName('text2')
 for (const text of text_2) {
     text.innerText = 'june-2021'
+}*/
+let arr = [1, 2, 3, 4, 5,8]
+function x(arr) {
+    for (const a of arr) {
+        if (arr[a] % 2 === 0) {
+            console.log(arr[a])
+        }
+
+    }
+
 }
+x(arr)
